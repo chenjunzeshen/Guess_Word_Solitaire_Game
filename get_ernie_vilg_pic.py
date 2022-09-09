@@ -12,14 +12,3 @@ def get_create_pic_url(keyword):
     rst = TextToImage.create(**input_dict)
     img_url = rst['imgUrls'][0] # 保存生成的第一张图片
     return img_url
-
-
-if __name__ == '__main__':
-    keyword = "黑夜总会过去"
-    try:
-        resule = get_create_pic_url(keyword)
-    except:
-        print("存在敏感词")
-    print("*" * 50)
-    print(resule)
-    print("*" * 50)
